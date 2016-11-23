@@ -143,15 +143,14 @@ const doAction = (action) => {
 
         case settings.MINIMUM_VISIT_TIME:
           if (action.value <= 0) break
-
-          synopsis.options.minDuration = action.value * 1000
+          ledgerInfo.minDuration = action.value
           updatePublisherInfo()
           break
 
         case settings.MINIMUM_VISITS:
           if (action.value <= 0) break
 
-          synopsis.options.minPublisherVisits = action.value
+          ledgerInfo.minPublisherVisits = action.value
           updatePublisherInfo()
           break
 
